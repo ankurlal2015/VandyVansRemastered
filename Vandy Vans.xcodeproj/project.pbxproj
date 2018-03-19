@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC58C59B205F690F002F5010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C59A205F690F002F5010 /* AppDelegate.swift */; };
+		DC58C59D205F690F002F5010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C59C205F690F002F5010 /* ViewController.swift */; };
+		DC58C5A0205F690F002F5010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C59E205F690F002F5010 /* Main.storyboard */; };
+		DC58C5A2205F690F002F5010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A1205F690F002F5010 /* Assets.xcassets */; };
+		DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */; };
+		DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */; };
+		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC58C5AC205F690F002F5010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC58C58F205F690E002F5010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC58C596205F690F002F5010;
+			remoteInfo = "Vandy Vans";
+		};
+		DC58C5B7205F690F002F5010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC58C58F205F690E002F5010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC58C596205F690F002F5010;
+			remoteInfo = "Vandy Vans";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC58C597205F690F002F5010 /* Vandy Vans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vandy Vans.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C59A205F690F002F5010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC58C59C205F690F002F5010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC58C59F205F690F002F5010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC58C5A1205F690F002F5010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC58C5A4205F690F002F5010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC58C5A6205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansTests.swift; sourceTree = "<group>"; };
+		DC58C5B1205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansUITests.swift; sourceTree = "<group>"; };
+		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC58C594205F690F002F5010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5A8205F690F002F5010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5B3205F690F002F5010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC58C58E205F690E002F5010 = {
+			isa = PBXGroup;
+			children = (
+				DC58C599205F690F002F5010 /* Vandy Vans */,
+				DC58C5AE205F690F002F5010 /* Vandy VansTests */,
+				DC58C5B9205F690F002F5010 /* Vandy VansUITests */,
+				DC58C598205F690F002F5010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC58C598205F690F002F5010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC58C597205F690F002F5010 /* Vandy Vans.app */,
+				DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */,
+				DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC58C599205F690F002F5010 /* Vandy Vans */ = {
+			isa = PBXGroup;
+			children = (
+				DC58C59A205F690F002F5010 /* AppDelegate.swift */,
+				DC58C59C205F690F002F5010 /* ViewController.swift */,
+				DC58C59E205F690F002F5010 /* Main.storyboard */,
+				DC58C5A1205F690F002F5010 /* Assets.xcassets */,
+				DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */,
+				DC58C5A6205F690F002F5010 /* Info.plist */,
+			);
+			path = "Vandy Vans";
+			sourceTree = "<group>";
+		};
+		DC58C5AE205F690F002F5010 /* Vandy VansTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */,
+				DC58C5B1205F690F002F5010 /* Info.plist */,
+			);
+			path = "Vandy VansTests";
+			sourceTree = "<group>";
+		};
+		DC58C5B9205F690F002F5010 /* Vandy VansUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */,
+				DC58C5BC205F690F002F5010 /* Info.plist */,
+			);
+			path = "Vandy VansUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC58C596205F690F002F5010 /* Vandy Vans */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Vans" */;
+			buildPhases = (
+				DC58C593205F690F002F5010 /* Sources */,
+				DC58C594205F690F002F5010 /* Frameworks */,
+				DC58C595205F690F002F5010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vandy Vans";
+			productName = "Vandy Vans";
+			productReference = DC58C597205F690F002F5010 /* Vandy Vans.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC58C5AA205F690F002F5010 /* Vandy VansTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansTests" */;
+			buildPhases = (
+				DC58C5A7205F690F002F5010 /* Sources */,
+				DC58C5A8205F690F002F5010 /* Frameworks */,
+				DC58C5A9205F690F002F5010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC58C5AD205F690F002F5010 /* PBXTargetDependency */,
+			);
+			name = "Vandy VansTests";
+			productName = "Vandy VansTests";
+			productReference = DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC58C5B5205F690F002F5010 /* Vandy VansUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansUITests" */;
+			buildPhases = (
+				DC58C5B2205F690F002F5010 /* Sources */,
+				DC58C5B3205F690F002F5010 /* Frameworks */,
+				DC58C5B4205F690F002F5010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC58C5B8205F690F002F5010 /* PBXTargetDependency */,
+			);
+			name = "Vandy VansUITests";
+			productName = "Vandy VansUITests";
+			productReference = DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC58C58F205F690E002F5010 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Berger-Lal";
+				TargetAttributes = {
+					DC58C596205F690F002F5010 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DC58C5AA205F690F002F5010 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC58C596205F690F002F5010;
+					};
+					DC58C5B5205F690F002F5010 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC58C596205F690F002F5010;
+					};
+				};
+			};
+			buildConfigurationList = DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Vans" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC58C58E205F690E002F5010;
+			productRefGroup = DC58C598205F690F002F5010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC58C596205F690F002F5010 /* Vandy Vans */,
+				DC58C5AA205F690F002F5010 /* Vandy VansTests */,
+				DC58C5B5205F690F002F5010 /* Vandy VansUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC58C595205F690F002F5010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */,
+				DC58C5A2205F690F002F5010 /* Assets.xcassets in Resources */,
+				DC58C5A0205F690F002F5010 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5A9205F690F002F5010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5B4205F690F002F5010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC58C593205F690F002F5010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC58C59D205F690F002F5010 /* ViewController.swift in Sources */,
+				DC58C59B205F690F002F5010 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5A7205F690F002F5010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC58C5B2205F690F002F5010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC58C5AD205F690F002F5010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC58C596205F690F002F5010 /* Vandy Vans */;
+			targetProxy = DC58C5AC205F690F002F5010 /* PBXContainerItemProxy */;
+		};
+		DC58C5B8205F690F002F5010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC58C596205F690F002F5010 /* Vandy Vans */;
+			targetProxy = DC58C5B7205F690F002F5010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC58C59E205F690F002F5010 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC58C59F205F690F002F5010 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC58C5A4205F690F002F5010 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC58C5BD205F690F002F5010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC58C5BE205F690F002F5010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC58C5C0205F690F002F5010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy Vans/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC58C5C1205F690F002F5010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy Vans/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DC58C5C3205F690F002F5010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy VansTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-VansTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Vans.app/Vandy Vans";
+			};
+			name = Debug;
+		};
+		DC58C5C4205F690F002F5010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy VansTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-VansTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Vans.app/Vandy Vans";
+			};
+			name = Release;
+		};
+		DC58C5C6205F690F002F5010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy VansUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-VansUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vandy Vans";
+			};
+			name = Debug;
+		};
+		DC58C5C7205F690F002F5010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BL526KQ3T6;
+				INFOPLIST_FILE = "Vandy VansUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-VansUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vandy Vans";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Vans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC58C5BD205F690F002F5010 /* Debug */,
+				DC58C5BE205F690F002F5010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Vans" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC58C5C0205F690F002F5010 /* Debug */,
+				DC58C5C1205F690F002F5010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC58C5C3205F690F002F5010 /* Debug */,
+				DC58C5C4205F690F002F5010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC58C5C6205F690F002F5010 /* Debug */,
+				DC58C5C7205F690F002F5010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC58C58F205F690E002F5010 /* Project object */;
+}
