@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleMaps
 
 let mapStyle = "[" +
     "{" +
@@ -62,4 +63,20 @@ let mapStyle = "[" +
 
 let VandyLattitude = 36.1425898
 let Vandylongitude = -86.8022756
+
+class VandyMapView{
+    
+    func getMap() -> GMSMapView{
+        let camera = GMSCameraPosition.camera(withLatitude: VandyLattitude, longitude: Vandylongitude, zoom: 15)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        
+        do {
+            // Set the map style by passing a valid JSON string.
+            mapView.mapStyle = try GMSMapStyle(jsonString: mapStyle)
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+        return mapView
+    }
+}
 

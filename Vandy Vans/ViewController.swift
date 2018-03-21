@@ -22,19 +22,9 @@ class ViewController: UIViewController {
     }
     
     override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        //36.1425898, -86.8022756, zoom: 15 == Vanderbilt Map Correct
-        let camera = GMSCameraPosition.camera(withLatitude: 36.1425898, longitude: -86.8022756, zoom: 15)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
-        do {
-            // Set the map style by passing a valid JSON string.
-            mapView.mapStyle = try GMSMapStyle(jsonString: style)
-        } catch {
-            NSLog("One or more of the map styles failed to load. \(error)")
-        }
-        
-        self.view = mapView
+        //Get Map and display it
+        self.view =  VandyMapView().getMap()
         
         // Creates a marker in the center of the map.
 //        let marker = GMSMarker()
