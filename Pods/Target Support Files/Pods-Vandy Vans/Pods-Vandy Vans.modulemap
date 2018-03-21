@@ -1,0 +1,6 @@
+framework module Pods_Vandy_Vans {
+  umbrella header "Pods-Vandy Vans-umbrella.h"
+
+  export *
+  module * { export * }
+}

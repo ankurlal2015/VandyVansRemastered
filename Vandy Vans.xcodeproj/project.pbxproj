@@ -16,6 +16,7 @@
 		DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */; };
 		DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */; };
 		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
+		DCD3A3452061E87B0054F678 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD3A3442061E87B0054F678 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansUITests.swift; sourceTree = "<group>"; };
 		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD3A3442061E87B0054F678 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DFB39D4FBB05307512AB7CDF /* Pods-Vandy Vans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandy Vans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vandy Vans/Pods-Vandy Vans.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			children = (
 				DC58C59A205F690F002F5010 /* AppDelegate.swift */,
 				DC58C59C205F690F002F5010 /* ViewController.swift */,
+				DCD3A3442061E87B0054F678 /* MapView.swift */,
 				DC58C59E205F690F002F5010 /* Main.storyboard */,
 				DC58C5A1205F690F002F5010 /* Assets.xcassets */,
 				DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */,
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC58C59D205F690F002F5010 /* ViewController.swift in Sources */,
+				DCD3A3452061E87B0054F678 /* MapView.swift in Sources */,
 				DC58C59B205F690F002F5010 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
