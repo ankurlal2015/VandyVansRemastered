@@ -76,6 +76,8 @@ class VandyMapView{
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
+        //Enable blue dot thingy for users' current location
+        mapView.isMyLocationEnabled = true
         return mapView
     }
 }
