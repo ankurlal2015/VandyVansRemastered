@@ -9,7 +9,8 @@ target 'Vandy Vans' do
   # Pods for Vandy Vans
 
   pod 'GoogleMaps', '= 2.6.0'
-
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON'
 
   target 'Vandy VansTests' do
     inherit! :search_paths

@@ -8,14 +8,17 @@
 
 import UIKit
 import GoogleMaps
+import SwiftyJSON
 
 class ViewController: UIViewController {
-
+    let restApiManager = RestApiManager();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -23,10 +26,45 @@ class ViewController: UIViewController {
     
     override func loadView() {
         //Load Map Background
-        self.view =  VandyMapView().getMap()
-        
+        self.view = VandyMapView().getVandyMap()
+        //drawBlackRoute()
+        drawRedRoute()
+        //drawGoldRoute()
     }
-
-
+    
+    func drawBlackRoute(){
+        self.restApiManager.getWaypoints(vanColor: "BLACK") {
+            (waypoints) in
+            self.restApiManager.getStops(vanColor: "BLACK") {
+                (stops) in
+                //add route
+                self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().black)
+            }
+        };
+    }
+    
+    
+    func drawRedRoute(){
+        self.restApiManager.getWaypoints(vanColor: "RED") {
+            (waypoints) in
+            self.restApiManager.getStops(vanColor: "RED") {
+                (stops) in
+                //add route
+                self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().red)
+            }
+        };
+    }
+    
+    
+    func drawGoldRoute(){
+        self.restApiManager.getWaypoints(vanColor: "GOLD") {
+            (waypoints) in
+            self.restApiManager.getStops(vanColor: "GOLD") {
+                (stops) in
+                //add route
+                self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().gold)
+            }
+        };
+    }
 }
 
