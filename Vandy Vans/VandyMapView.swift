@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 //To move marker so the center of circle is on the line instead of the edge
-let markerShiftConstant = 0.0002
+let markerShiftConstant = 0.0003
 
 class VandyMapView{
     
