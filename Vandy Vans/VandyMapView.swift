@@ -34,7 +34,9 @@ class VandyMapView{
             let longitude = Double(waypoints[0][index]["Longitude"].rawString()!)
             path.add(CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!))
         }
-        for index in 0...stops[0].count {
+        
+        //-1 because bad data duplicates lupton and scomb. If data changes, remove this
+        for index in 0..<stops.count - 1 {
             let lattitude = Double(stops[index]["Latitude"].rawString()!)! - markerShiftConstant
             let longitude = Double(stops[index]["Longitude"].rawString()!)
             let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)

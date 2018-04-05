@@ -70,6 +70,10 @@ class ViewController: UIViewController {
         };
     }
     
+    //Size buttons based on Screen size and lay them out.
+    //Only do it once, don't redraw every time we change the map
+    //TODO: Refactor this so it isn't so hacky
+    //But it works, so won't change it for a while
     func initButtons(){
         if(!buttonsInit){
             buttonsInit = true
@@ -86,9 +90,7 @@ class ViewController: UIViewController {
             
             
             let blackBtn: UIButton = UIButton(type: UIButtonType.custom)
-            //let blackBtn = UIButton()
             blackBtn.frame = CGRect(x: (centerX - buttonShift), y: vertShift, width: buttonSize, height: buttonSize)
-
             blackBtn.setImage(UIImage(named: "BlackRouteButton"),for: .normal)
             blackBtn.addTarget(self, action: #selector(self.drawBlackRoute), for: .touchUpInside)
             self.view.addSubview(blackBtn)
@@ -100,7 +102,6 @@ class ViewController: UIViewController {
             self.view.addSubview(redBtn)
             
             let goldBtn: UIButton = UIButton(type: UIButtonType.custom)
-            //let goldBtn =  UIButton()
             goldBtn.frame = CGRect(x: (centerX - buttonShift + buttonSpacing), y: vertShift, width: buttonSize, height: buttonSize)
             goldBtn.setImage(UIImage(named: "GoldRouteButton"),for: .normal)
             goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)

@@ -98,7 +98,6 @@ class RestApiManager: NSObject {
         print(req)
         Alamofire.request(req).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
-                //print(JSON(responseData.result.value!))
                 //return JSON(responseData.result.value!)
                 completion(JSON(responseData.result.value!))
             }
