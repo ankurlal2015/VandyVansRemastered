@@ -11,80 +11,20 @@ import GoogleMaps
 import Alamofire
 import SwiftyJSON
 
-let mapStyle = "[" +
-    "{" +
-    "\"elementType\": \"labels\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    "]" +
-    "}," +
-    "{" +
-    "\"featureType\": \"administrative.land_parcel\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    " ]" +
-    "}," +
-    "{" +
-    "\"featureType\": \"administrative.neighborhood\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    "]" +
-    "}," +
-    "{" +
-    "\"featureType\": \"poi.business\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    "]" +
-    "}," +
-    "{" +
-    "\"featureType\": \"road\"," +
-    "\"elementType\": \"labels.icon\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    "]" +
-    "}," +
-    "{" +
-    "\"featureType\": \"transit\"," +
-    "\"stylers\": [" +
-    "{" +
-    "\"visibility\": \"off\"" +
-    "}" +
-    "]" +
-    "}" +
-"]"
-
-let VandyLattitude = 36.1425898
-let Vandylongitude = -86.8022756
-
 class VandyMapView{
     
+    var mapView:GMSMapView
+    
+    init(){
+        mapView = SingletonMap.map.getMapView()
+    }
+    
     func getVandyMap() -> GMSMapView{
-        let camera = GMSCameraPosition.camera(withLatitude: VandyLattitude, longitude: Vandylongitude, zoom: 15)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        
-        do {
-            // Set the map style by passing a valid JSON string.
-            mapView.mapStyle = try GMSMapStyle(jsonString: mapStyle)
-        } catch {
-            NSLog("One or more of the map styles failed to load. \(error)")
-        }
-        //Enable blue dot thingy for users' current location
-        mapView.isMyLocationEnabled = true
         return mapView
     }
     
     func drawRouteWithStops(waypoints:JSON, stops:JSON, color: UIColor) ->GMSMapView{
-        let mapView = self.getVandyMap()
+        mapView.clear()
         let path = GMSMutablePath()
         for index in 0..<waypoints[0].count {
             let lattitude = Double(waypoints[0][index]["Latitude"].rawString()!)
@@ -92,19 +32,20 @@ class VandyMapView{
             path.add(CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!))
         }
         for index in 0..<stops[0].count {
-            let lattitude = Double(stops[index]["Latitude"].rawString()!)
+            let lattitude = Double(stops[index]["Latitude"].rawString()!)! - 0.0002
             let longitude = Double(stops[index]["Longitude"].rawString()!)
-            let position = CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!)
+            let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
             let marker = GMSMarker(position: position)
             marker.title = stops[index]["Name"].rawString()!
-            marker.map = mapView
+            marker.map = self.mapView
+            marker.icon = UIImage(named:"GenericStop")
         }
         let polyline = GMSPolyline(path: path)
         polyline.strokeWidth = 5.0
         polyline.strokeColor = color
         polyline.geodesic = true
-        polyline.map = mapView
-        return mapView
+        polyline.map = self.mapView
+        return self.mapView
     }
 }
 
