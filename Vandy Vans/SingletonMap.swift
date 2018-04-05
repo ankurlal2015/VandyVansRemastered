@@ -62,7 +62,7 @@ let mapStyle = "[" +
 "]"
 
 let VandyLattitude = 36.1425898
-let Vandylongitude = -86.8022756
+let Vandylongitude = -86.8032756
 
 class SingletonMap {
     var mapView:GMSMapView
