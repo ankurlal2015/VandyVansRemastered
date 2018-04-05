@@ -11,6 +11,9 @@ import GoogleMaps
 import Alamofire
 import SwiftyJSON
 
+//To move marker so the center of circle is on the line instead of the edge
+let markerShiftConstant = 0.0002
+
 class VandyMapView{
     
     var mapView:GMSMapView
@@ -31,8 +34,8 @@ class VandyMapView{
             let longitude = Double(waypoints[0][index]["Longitude"].rawString()!)
             path.add(CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!))
         }
-        for index in 0..<stops[0].count {
-            let lattitude = Double(stops[index]["Latitude"].rawString()!)! - 0.0002
+        for index in 0...stops[0].count {
+            let lattitude = Double(stops[index]["Latitude"].rawString()!)! - markerShiftConstant
             let longitude = Double(stops[index]["Longitude"].rawString()!)
             let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
             let marker = GMSMarker(position: position)

@@ -12,12 +12,13 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     let restApiManager = RestApiManager();
+    var buttonsInit = false
     //let vandyMapView = VandyMapView();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        //Load Map initially
+        self.view = VandyMapView().getVandyMap()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -27,11 +28,8 @@ class ViewController: UIViewController {
     }
     
     override func loadView() {
-        //Load Map Background
-        self.view = VandyMapView().getVandyMap()
-        //drawBlackRoute()
-        drawRedRoute()
-        //drawGoldRoute()
+        //Black by default
+        drawBlackRoute()
     }
     
     @objc func drawBlackRoute(){
@@ -41,28 +39,11 @@ class ViewController: UIViewController {
                 (stops) in
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().black)
+                self.initButtons()
                 
-                let blackBtn: UIButton = UIButton(type: UIButtonType.custom)
-                blackBtn.frame = CGRect(x: 90, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                blackBtn.setImage(UIImage(named: "BlackRouteButton"),for: .normal)
-                //blackBtn.addTarget(self, action: #selector(self.drawBlackRoute), for: .touchUpInside)
-                self.view.addSubview(blackBtn)
-                
-                let redBtn: UIButton = UIButton(type: UIButtonType.custom)
-                redBtn.frame = CGRect(x: -20, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                redBtn.setImage(UIImage(named: "RedRouteButton"),for: .normal)
-                redBtn.addTarget(self, action: #selector(self.drawRedRoute), for: .touchUpInside)
-                self.view.addSubview(redBtn)
-                
-                let goldBtn: UIButton = UIButton(type: UIButtonType.custom)
-                goldBtn.frame = CGRect(x: 200, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                goldBtn.setImage(UIImage(named: "GoldRouteButton"),for: .normal)
-                goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)
-                self.view.addSubview(goldBtn)
             }
         };
     }
-    
     
     @objc func drawRedRoute(){
         self.restApiManager.getWaypoints(vanColor: "RED") {
@@ -71,27 +52,12 @@ class ViewController: UIViewController {
                 (stops) in
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().red)
-                
-                let blackBtn: UIButton = UIButton(type: UIButtonType.custom)
-                blackBtn.frame = CGRect(x: 90, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                blackBtn.setImage(UIImage(named: "BlackRouteButton"),for: .normal)
-                blackBtn.addTarget(self, action: #selector(self.drawBlackRoute), for: .touchUpInside)
-                self.view.addSubview(blackBtn)
-
-                let redBtn: UIButton = UIButton(type: UIButtonType.custom)
-                redBtn.frame = CGRect(x: -20, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                redBtn.setImage(UIImage(named: "RedRouteButton"),for: .normal)
-                //redBtn.addTarget(self, action: #selector(self.drawRedRoute), for: .touchUpInside)
-                self.view.addSubview(redBtn)
-                
-                let goldBtn: UIButton = UIButton(type: UIButtonType.custom)
-                goldBtn.frame = CGRect(x: 200, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                goldBtn.setImage(UIImage(named: "GoldRouteButton"),for: .normal)
-                goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)
-                self.view.addSubview(goldBtn)
+                self.initButtons()
             }
+            
         };
     }
+    
     @objc func drawGoldRoute(){
         self.restApiManager.getWaypoints(vanColor: "GOLD") {
             (waypoints) in
@@ -99,26 +65,48 @@ class ViewController: UIViewController {
                 (stops) in
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().gold)
-                
-                let blackBtn: UIButton = UIButton(type: UIButtonType.custom)
-                blackBtn.frame = CGRect(x: 90, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                blackBtn.setImage(UIImage(named: "BlackRouteButton"),for: .normal)
-                blackBtn.addTarget(self, action: #selector(self.drawBlackRoute), for: .touchUpInside)
-                self.view.addSubview(blackBtn)
-                
-                let redBtn: UIButton = UIButton(type: UIButtonType.custom)
-                redBtn.frame = CGRect(x: -20, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                redBtn.setImage(UIImage(named: "RedRouteButton"),for: .normal)
-                redBtn.addTarget(self, action: #selector(self.drawRedRoute), for: .touchUpInside)
-                self.view.addSubview(redBtn)
-                
-                let goldBtn: UIButton = UIButton(type: UIButtonType.custom)
-                goldBtn.frame = CGRect(x: 200, y: self.view.frame.size.height - 200, width: 200, height: 200)
-                goldBtn.setImage(UIImage(named: "GoldRouteButton"),for: .normal)
-                //goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)
-                self.view.addSubview(goldBtn)
+                self.initButtons()
             }
         };
+    }
+    
+    func initButtons(){
+        if(!buttonsInit){
+            buttonsInit = true
+            
+            let buttonSize = CGFloat(85)
+            
+            let centerX = self.view.center.x
+            //shift by button with
+            let buttonShift = buttonSize/2
+            //Distance between buttons
+            let buttonSpacing = CGFloat(110.0)
+            //buttons render 20% from bottom
+            let vertShift = self.view.frame.size.height - self.view.frame.size.height/5
+            
+            
+            let blackBtn: UIButton = UIButton(type: UIButtonType.custom)
+            //let blackBtn = UIButton()
+            blackBtn.frame = CGRect(x: (centerX - buttonShift), y: vertShift, width: buttonSize, height: buttonSize)
+
+            blackBtn.setImage(UIImage(named: "BlackRouteButton"),for: .normal)
+            blackBtn.addTarget(self, action: #selector(self.drawBlackRoute), for: .touchUpInside)
+            self.view.addSubview(blackBtn)
+            
+            let redBtn: UIButton = UIButton(type: UIButtonType.custom)
+            redBtn.frame = CGRect(x: (centerX - buttonShift - buttonSpacing), y: vertShift, width: buttonSize, height: buttonSize)
+            redBtn.setImage(UIImage(named: "RedRouteButton"),for: .normal)
+            redBtn.addTarget(self, action: #selector(self.drawRedRoute), for: .touchUpInside)
+            self.view.addSubview(redBtn)
+            
+            let goldBtn: UIButton = UIButton(type: UIButtonType.custom)
+            //let goldBtn =  UIButton()
+            goldBtn.frame = CGRect(x: (centerX - buttonShift + buttonSpacing), y: vertShift, width: buttonSize, height: buttonSize)
+            goldBtn.setImage(UIImage(named: "GoldRouteButton"),for: .normal)
+            goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)
+            self.view.addSubview(goldBtn)
+        
+        }
     }
 }
 
