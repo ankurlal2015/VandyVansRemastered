@@ -20,6 +20,7 @@
 		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
 		DCD09EE12073257400BA597D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE02073257400BA597D /* Colors.swift */; };
 		DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE220766CF000BA597D /* SingletonMap.swift */; };
+		DCD09EE52076A2C800BA597D /* VehicleLocationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */; };
 		DCD3A3452061E87B0054F678 /* VandyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD3A3442061E87B0054F678 /* VandyMapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD09EE02073257400BA597D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DCD09EE220766CF000BA597D /* SingletonMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonMap.swift; sourceTree = "<group>"; };
+		DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationLoop.swift; sourceTree = "<group>"; };
 		DCD3A3442061E87B0054F678 /* VandyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VandyMapView.swift; sourceTree = "<group>"; };
 		DFB39D4FBB05307512AB7CDF /* Pods-Vandy Vans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandy Vans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vandy Vans/Pods-Vandy Vans.debug.xcconfig"; sourceTree = "<group>"; };
 		E7D217FE0E85188982918DFC /* Pods_Vandy_Vans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vandy_Vans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 			children = (
 				DC58C59A205F690F002F5010 /* AppDelegate.swift */,
 				DC2FC1EB206D4B31002C997E /* RestApiManager.swift */,
+				DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */,
 				DC58C59C205F690F002F5010 /* ViewController.swift */,
 				DCD09EE220766CF000BA597D /* SingletonMap.swift */,
 				DCD09EE02073257400BA597D /* Colors.swift */,
@@ -480,6 +483,7 @@
 				DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */,
 				DCD3A3452061E87B0054F678 /* VandyMapView.swift in Sources */,
 				DC2FC1EC206D4B31002C997E /* RestApiManager.swift in Sources */,
+				DCD09EE52076A2C800BA597D /* VehicleLocationLoop.swift in Sources */,
 				DC58C59B205F690F002F5010 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

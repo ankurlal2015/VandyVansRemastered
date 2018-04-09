@@ -103,4 +103,26 @@ class RestApiManager: NSObject {
             }
         }
     }
+    
+    func getVehicles(vanColor : String, completion: @escaping (_ value:JSON)->()){
+        var routeId = ""
+        switch vanColor {
+        case "BLACK"  :
+            routeId = self.black.routeID
+        case "RED"  :
+            routeId = self.red.routeID
+        case "GOLD"  :
+            routeId = self.gold.routeID
+        default :
+            print("specify van, either RED, BLACK, or GOLD")
+        }
+        let req = base + "Route/" + routeId + "/Vehicles"
+        print(req)
+        Alamofire.request(req).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                //print(JSON(responseData.result.value!))
+                completion(JSON(responseData.result.value!))
+            }
+        }
+    }
 }

@@ -11,8 +11,10 @@ import GoogleMaps
 import SwiftyJSON
 
 class ViewController: UIViewController {
-    let restApiManager = RestApiManager();
+    let restApiManager = RestApiManager()
     var buttonsInit = false
+    let vehicleLocationLoop = VehicleLocationLoop()
+    var timer:Timer?
     //let vandyMapView = VandyMapView();
     
     override func viewDidLoad() {
@@ -40,7 +42,10 @@ class ViewController: UIViewController {
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().black)
                 self.initButtons()
-                
+                //Clear previous vans
+                self.clearTimer()
+                //Start fetching van data
+                self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.drawBlackVans), userInfo: nil, repeats: true)
             }
         };
     }
@@ -53,6 +58,12 @@ class ViewController: UIViewController {
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().red)
                 self.initButtons()
+                
+                //Clear previous vans
+                self.clearTimer()
+                //Start fetching van data
+                self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.drawRedVans), userInfo: nil, repeats: true)
+                
             }
             
         };
@@ -66,8 +77,40 @@ class ViewController: UIViewController {
                 //add route
                 self.view =  VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().gold)
                 self.initButtons()
+                
+                //Clear previous vans
+                self.clearTimer()
+                //Start fetching van data
+                self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.drawGoldVans), userInfo: nil, repeats: true)
             }
-        };
+        }
+    }
+    
+    @objc func drawBlackVans(){
+        self.restApiManager.getVehicles(vanColor: "BLACK") {
+            (vehicles) in
+            //print(vehicles)
+            //self.view = VandyMapView().drawVans(vehicles:vehicles)
+            self.view = self.vehicleLocationLoop.drawVans(vehicles: vehicles, map: SingletonMap.map.getMapView())
+        }
+    }
+    
+    @objc func drawRedVans(){
+        self.restApiManager.getVehicles(vanColor: "RED") {
+            (vehicles) in
+            //print(vehicles)
+            //self.view = VandyMapView().drawVans(vehicles:vehicles)
+            self.view = self.vehicleLocationLoop.drawVans(vehicles: vehicles, map: SingletonMap.map.getMapView())
+        }
+    }
+    
+    @objc func drawGoldVans(){
+        self.restApiManager.getVehicles(vanColor: "GOLD") {
+            (vehicles) in
+            //print(vehicles)
+            //self.view = VandyMapView().drawVans(vehicles:vehicles)
+            self.view = self.vehicleLocationLoop.drawVans(vehicles: vehicles, map: SingletonMap.map.getMapView())
+        }
     }
     
     //Size buttons based on Screen size and lay them out.
@@ -107,6 +150,11 @@ class ViewController: UIViewController {
             goldBtn.addTarget(self, action: #selector(self.drawGoldRoute), for: .touchUpInside)
             self.view.addSubview(goldBtn)
         
+        }
+    }
+    func clearTimer(){
+        if(self.timer != nil){
+            self.timer!.invalidate()
         }
     }
 }

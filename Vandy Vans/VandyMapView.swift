@@ -17,6 +17,7 @@ let markerShiftConstant = 0.0003
 class VandyMapView{
     
     var mapView:GMSMapView
+    var vans = [GMSMarker]()
     
     init(){
         mapView = SingletonMap.map.getMapView()
@@ -52,5 +53,29 @@ class VandyMapView{
         polyline.map = self.mapView
         return self.mapView
     }
+    
+//    func drawVans(vehicles:JSON)->GMSMapView{
+//        print("called")
+//        self.clearVans()
+//        for index in 0..<vehicles.count {
+//            let lattitude = Double(vehicles[index]["Latitude"].rawString()!)! - markerShiftConstant
+//            let longitude = Double(vehicles[index]["Longitude"].rawString()!)
+//            let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
+//            let marker = GMSMarker(position: position)
+//            self.vans.append(marker)
+//            //marker.title = vehicles[index]["Name"].rawString()!
+//            marker.map = self.mapView
+//            marker.icon = UIImage(named:"Van")
+//        }
+//        print(self.vans.count)
+//        return self.mapView
+//    }
+//    
+//    func clearVans(){
+//        print(self.vans.count)
+//        for index in 0..<self.vans.count{
+//            self.vans[index].map = nil
+//        }
+//    }
 }
 
