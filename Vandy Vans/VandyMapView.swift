@@ -14,6 +14,11 @@ import SwiftyJSON
 //To move marker so the center of circle is on the line instead of the edge
 let markerShiftConstant = 0.0003
 
+struct StopInfo{
+    var stopId: String!
+    var patternID: String!
+}
+
 class VandyMapView{
     
     var mapView:GMSMapView
@@ -43,6 +48,7 @@ class VandyMapView{
             let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
             let marker = GMSMarker(position: position)
             marker.title = stops[index]["Name"].rawString()!
+            marker.userData = stops[index]["ID"].rawString()!
             marker.map = self.mapView
             marker.icon = UIImage(named:"GenericStop")
         }
@@ -53,29 +59,5 @@ class VandyMapView{
         polyline.map = self.mapView
         return self.mapView
     }
-    
-//    func drawVans(vehicles:JSON)->GMSMapView{
-//        print("called")
-//        self.clearVans()
-//        for index in 0..<vehicles.count {
-//            let lattitude = Double(vehicles[index]["Latitude"].rawString()!)! - markerShiftConstant
-//            let longitude = Double(vehicles[index]["Longitude"].rawString()!)
-//            let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
-//            let marker = GMSMarker(position: position)
-//            self.vans.append(marker)
-//            //marker.title = vehicles[index]["Name"].rawString()!
-//            marker.map = self.mapView
-//            marker.icon = UIImage(named:"Van")
-//        }
-//        print(self.vans.count)
-//        return self.mapView
-//    }
-//    
-//    func clearVans(){
-//        print(self.vans.count)
-//        for index in 0..<self.vans.count{
-//            self.vans[index].map = nil
-//        }
-//    }
 }
 

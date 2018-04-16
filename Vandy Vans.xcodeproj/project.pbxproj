@@ -18,6 +18,8 @@
 		DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */; };
 		DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */; };
 		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
+		DCB4A21D208041E700E0A9E7 /* stopInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */; };
+		DCB4A21F2082C50000E0A9E7 /* ArrivalsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */; };
 		DCD09EE12073257400BA597D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE02073257400BA597D /* Colors.swift */; };
 		DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE220766CF000BA597D /* SingletonMap.swift */; };
 		DCD09EE52076A2C800BA597D /* VehicleLocationLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */; };
@@ -63,6 +65,8 @@
 		DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansUITests.swift; sourceTree = "<group>"; };
 		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopInfoWindowView.swift; sourceTree = "<group>"; };
+		DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsCacher.swift; sourceTree = "<group>"; };
 		DCD09EE02073257400BA597D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DCD09EE220766CF000BA597D /* SingletonMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonMap.swift; sourceTree = "<group>"; };
 		DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationLoop.swift; sourceTree = "<group>"; };
@@ -141,10 +145,12 @@
 				DCD09EE220766CF000BA597D /* SingletonMap.swift */,
 				DCD09EE02073257400BA597D /* Colors.swift */,
 				DCD3A3442061E87B0054F678 /* VandyMapView.swift */,
+				DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */,
 				DC58C59E205F690F002F5010 /* Main.storyboard */,
 				DC58C5A1205F690F002F5010 /* Assets.xcassets */,
 				DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */,
 				DC58C5A6205F690F002F5010 /* Info.plist */,
+				DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */,
 			);
 			path = "Vandy Vans";
 			sourceTree = "<group>";
@@ -252,7 +258,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Berger-Lal";
 				TargetAttributes = {
 					DC58C596205F690F002F5010 = {
@@ -478,7 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB4A21D208041E700E0A9E7 /* stopInfoWindowView.swift in Sources */,
 				DCD09EE12073257400BA597D /* Colors.swift in Sources */,
+				DCB4A21F2082C50000E0A9E7 /* ArrivalsCacher.swift in Sources */,
 				DC58C59D205F690F002F5010 /* ViewController.swift in Sources */,
 				DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */,
 				DCD3A3452061E87B0054F678 /* VandyMapView.swift in Sources */,
@@ -553,6 +561,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -560,6 +569,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -610,6 +620,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -617,6 +628,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -651,12 +663,15 @@
 			baseConfigurationReference = DFB39D4FBB05307512AB7CDF /* Pods-Vandy Vans.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BL526KQ3T6;
 				INFOPLIST_FILE = "Vandy Vans/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -667,12 +682,15 @@
 			baseConfigurationReference = 049F07857CBB23A324DED10D /* Pods-Vandy Vans.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BL526KQ3T6;
 				INFOPLIST_FILE = "Vandy Vans/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

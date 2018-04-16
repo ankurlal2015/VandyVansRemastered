@@ -83,6 +83,10 @@ class SingletonMap {
         }
         //Enable blue dot thingy for users' current location
         mapView.isMyLocationEnabled = true
+        
+        //Stop Map rotation, Only allow Zoom
+        mapView.settings.rotateGestures = false
+   
         print("Singleton initialized")
     }
 }

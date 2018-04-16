@@ -86,8 +86,6 @@ class RestApiManager: NSObject {
         case "RED"  :
             routeId = self.red.routeID
             patternId = self.red.patternID
-            print(self.red.routeID)
-            print(self.red.patternID)
         case "GOLD"  :
             routeId = self.gold.routeID
             patternId = self.gold.patternID
@@ -117,6 +115,17 @@ class RestApiManager: NSObject {
             print("specify van, either RED, BLACK, or GOLD")
         }
         let req = base + "Route/" + routeId + "/Vehicles"
+        print(req)
+        Alamofire.request(req).responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                //print(JSON(responseData.result.value!))
+                completion(JSON(responseData.result.value!))
+            }
+        }
+    }
+    
+    func getArrivals(stopId : String, completion: @escaping (_ value:JSON)->()){
+        let req = base + "Stop/" + stopId + "/Arrivals"
         print(req)
         Alamofire.request(req).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
