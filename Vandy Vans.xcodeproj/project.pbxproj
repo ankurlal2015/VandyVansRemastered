@@ -18,7 +18,9 @@
 		DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */; };
 		DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */; };
 		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
-		DCB4A21D208041E700E0A9E7 /* stopInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */; };
+		DC922C6A208542840025BB9C /* VehicleLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC922C69208542840025BB9C /* VehicleLocationManager.swift */; };
+		DC922C6C208547110025BB9C /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC922C6B208547110025BB9C /* ButtonManager.swift */; };
+		DCB4A21D208041E700E0A9E7 /* StopInfoPopupViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21C208041E700E0A9E7 /* StopInfoPopupViewCreator.swift */; };
 		DCB4A21F2082C50000E0A9E7 /* ArrivalsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */; };
 		DCD09EE12073257400BA597D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE02073257400BA597D /* Colors.swift */; };
 		DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD09EE220766CF000BA597D /* SingletonMap.swift */; };
@@ -65,7 +67,9 @@
 		DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansUITests.swift; sourceTree = "<group>"; };
 		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopInfoWindowView.swift; sourceTree = "<group>"; };
+		DC922C69208542840025BB9C /* VehicleLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationManager.swift; sourceTree = "<group>"; };
+		DC922C6B208547110025BB9C /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
+		DCB4A21C208041E700E0A9E7 /* StopInfoPopupViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoPopupViewCreator.swift; sourceTree = "<group>"; };
 		DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsCacher.swift; sourceTree = "<group>"; };
 		DCD09EE02073257400BA597D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DCD09EE220766CF000BA597D /* SingletonMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonMap.swift; sourceTree = "<group>"; };
@@ -146,11 +150,13 @@
 				DCD09EE02073257400BA597D /* Colors.swift */,
 				DCD3A3442061E87B0054F678 /* VandyMapView.swift */,
 				DCB4A21E2082C50000E0A9E7 /* ArrivalsCacher.swift */,
+				DC922C69208542840025BB9C /* VehicleLocationManager.swift */,
+				DC922C6B208547110025BB9C /* ButtonManager.swift */,
 				DC58C59E205F690F002F5010 /* Main.storyboard */,
 				DC58C5A1205F690F002F5010 /* Assets.xcassets */,
 				DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */,
 				DC58C5A6205F690F002F5010 /* Info.plist */,
-				DCB4A21C208041E700E0A9E7 /* stopInfoWindowView.swift */,
+				DCB4A21C208041E700E0A9E7 /* StopInfoPopupViewCreator.swift */,
 			);
 			path = "Vandy Vans";
 			sourceTree = "<group>";
@@ -484,11 +490,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB4A21D208041E700E0A9E7 /* stopInfoWindowView.swift in Sources */,
+				DCB4A21D208041E700E0A9E7 /* StopInfoPopupViewCreator.swift in Sources */,
 				DCD09EE12073257400BA597D /* Colors.swift in Sources */,
+				DC922C6C208547110025BB9C /* ButtonManager.swift in Sources */,
 				DCB4A21F2082C50000E0A9E7 /* ArrivalsCacher.swift in Sources */,
 				DC58C59D205F690F002F5010 /* ViewController.swift in Sources */,
 				DCD09EE320766CF000BA597D /* SingletonMap.swift in Sources */,
+				DC922C6A208542840025BB9C /* VehicleLocationManager.swift in Sources */,
 				DCD3A3452061E87B0054F678 /* VandyMapView.swift in Sources */,
 				DC2FC1EC206D4B31002C997E /* RestApiManager.swift in Sources */,
 				DCD09EE52076A2C800BA597D /* VehicleLocationLoop.swift in Sources */,

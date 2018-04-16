@@ -1,43 +1,18 @@
 //
-//  ViewController.swift
+//  RouteDrawingManager.swift
 //  Vandy Vans
 //
-//  Created by Ankur Lal on 3/18/18.
+//  Created by Ankur Lal on 4/16/18.
 //  Copyright © 2018 Berger-Lal. All rights reserved.
 //
 
-import UIKit
-import GoogleMaps
-import SwiftyJSON
+import Foundation
 
-class ViewController: UIViewController, GMSMapViewDelegate {
+class RouteDrawingManager{
+    
     let restApiManager = RestApiManager()
-    let vehicleLocationManager = VehicleLocationManager()
     let buttonManager = ButtonManager()
-    let arrivalsCacher = ArrivalsCacher()
-    let stopInfoPopupViewCreator = StopInfoPopupViewCreator()
-    var buttonsInit = false
-    var vanTimer:Timer?
-    var arrivalTimer:Timer?
-    var infoView:UIView?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Load Map initially
-        self.view = VandyMapView().getVandyMap()
-        VandyMapView().getVandyMap().delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func loadView() {
-        //Black by default
-        drawBlackRoute()
-    }
     
     @objc func drawBlackRoute(){
         self.restApiManager.getWaypoints(vanColor: "BLACK") {
@@ -53,7 +28,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
                 self.vanTimer = Timer.scheduledTimer(timeInterval: 2, target: self.vehicleLocationManager, selector: #selector(self.vehicleLocationManager.drawBlackVans), userInfo: nil, repeats: true)
                 self.arrivalTimer = Timer.scheduledTimer(timeInterval: 2, target: self.arrivalsCacher, selector: #selector(self.arrivalsCacher.cacheBlackArrivals), userInfo: nil, repeats: true)
             }
-        }
+        };
     }
     
     @objc func drawRedRoute(){
@@ -74,7 +49,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
                 
             }
             
-        }
+        };
     }
     
     @objc func drawGoldRoute(){
@@ -96,17 +71,4 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         }
     }
     
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let stopId = marker.userData as! String
-        let arrivals = self.arrivalsCacher.getCachedArrivals(stopId: stopId)
-        
-        return stopInfoPopupViewCreator.generateStopInfoWindowView(marker: marker, arrivals: arrivals)
-    }
-    
-    func clearTimer(){
-        if(self.vanTimer != nil){
-            self.vanTimer!.invalidate()
-        }
-    }
 }
-

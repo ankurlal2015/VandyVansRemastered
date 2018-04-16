@@ -21,18 +21,14 @@ struct StopInfo{
 
 class VandyMapView{
     
-    var mapView:GMSMapView
+    var mapView = SingletonMap.map.getMapView()
     var vans = [GMSMarker]()
-    
-    init(){
-        mapView = SingletonMap.map.getMapView()
-    }
-    
+        
     func getVandyMap() -> GMSMapView{
         return mapView
     }
     
-    func drawRouteWithStops(waypoints:JSON, stops:JSON, color: UIColor) ->GMSMapView{
+    func drawRouteWithStops(waypoints:JSON, stops:JSON, color: UIColor) {
         mapView.clear()
         let path = GMSMutablePath()
         for index in 0..<waypoints[0].count {
@@ -57,7 +53,6 @@ class VandyMapView{
         polyline.strokeColor = color
         polyline.geodesic = true
         polyline.map = self.mapView
-        return self.mapView
     }
 }
 

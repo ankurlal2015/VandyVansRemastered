@@ -20,7 +20,7 @@ class VehicleLocationLoop{
     //MAYBE NEED TO USE CARDINAL DIRECTION AS A BACKUP
     
     
-    func drawVans(vehicles:JSON, map: GMSMapView)->GMSMapView{
+    func drawVans(vehicles:JSON){
         self.clearVans()
         for index in 0..<vehicles.count {
             let lattitude = Double(vehicles[index]["Latitude"].rawString()!)! 
@@ -40,10 +40,9 @@ class VehicleLocationLoop{
             //Save marker ref to clear on next refresh
             self.vans.append(marker)
             //marker.title = vehicles[index]["Name"].rawString()!
-            marker.map = map
+            marker.map = SingletonMap.map.getMapView()
             marker.icon = UIImage(named:"Van")
         }
-        return map
     }
     
     func clearVans(){
