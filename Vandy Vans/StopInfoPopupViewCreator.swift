@@ -23,11 +23,21 @@ class StopInfoPopupViewCreator{
     func generateStopInfoWindowView(marker:GMSMarker, arrivals:JSON) -> UIView{
         
         //Make White Rounded rectange
-        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 100))
+        let view = UIView(frame:CGRect.init(x: 20, y: 10, width: 200, height: 100))
+        let containerView = UIView(frame:CGRect.init(x: 0, y: 0, width: 240, height: 120))
         view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 10
-
+        view.layer.borderWidth = 0.0
         
+        //Add dropshadow
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.shadowRadius = 1
+        view.layer.masksToBounds = false
+        containerView.addSubview(view)
+
         let stopNameLabel = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 25))
         stopNameLabel.text = marker.title
         stopNameLabel.font =  UIFont.systemFont(ofSize: 20, weight: .regular)
@@ -58,7 +68,7 @@ class StopInfoPopupViewCreator{
         }
         
         
-        return view
+        return containerView
     }
     
     func ArrivalInfoToArrivalLabel(arrivalInfo : ArrivalInfo, parentView:UIView, parentLabel:UILabel, labelNumber:Int) -> UILabel{

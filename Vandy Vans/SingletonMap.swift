@@ -72,6 +72,10 @@ class SingletonMap {
         return mapView
     }
     
+    func recenterMap(){
+        mapView.animate(to: GMSCameraPosition.camera(withLatitude: VandyLattitude, longitude: Vandylongitude, zoom: 15))
+    }
+    
     private init() {
         let camera = GMSCameraPosition.camera(withLatitude: VandyLattitude, longitude: Vandylongitude, zoom: 15)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -86,7 +90,6 @@ class SingletonMap {
         
         //Stop Map rotation, Only allow Zoom
         mapView.settings.rotateGestures = false
-        //mapView.settings.myLocationButton = true
    
         print("Singleton initialized")
     }

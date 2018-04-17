@@ -44,6 +44,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
             (waypoints) in
             self.restApiManager.getStops(vanColor: "BLACK") {
                 (stops) in
+                //recenter
+                SingletonMap.map.recenterMap()
                 //add route
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().black)
                 self.buttonManager.initButtons(viewController: self)
@@ -61,6 +63,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
             (waypoints) in
             self.restApiManager.getStops(vanColor: "RED") {
                 (stops) in
+                //recenter
+                SingletonMap.map.recenterMap()
                 //add route
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().red)
                 self.buttonManager.initButtons(viewController: self)
@@ -82,6 +86,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
             (waypoints) in
             self.restApiManager.getStops(vanColor: "GOLD") {
                 (stops) in
+                //recenter
+                SingletonMap.map.recenterMap()
                 //add route
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().gold)
                 self.buttonManager.initButtons(viewController: self)
