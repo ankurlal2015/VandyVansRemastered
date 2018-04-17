@@ -86,6 +86,7 @@ class SingletonMap {
         
         //Stop Map rotation, Only allow Zoom
         mapView.settings.rotateGestures = false
+        //mapView.settings.myLocationButton = true
    
         print("Singleton initialized")
     }

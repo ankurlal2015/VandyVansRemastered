@@ -68,22 +68,34 @@ class StopInfoPopupViewCreator{
             parentLabel.frame.size.height + 15 * CGFloat(labelNumber), width: parentView.frame.size.width - 16, height: 15))
         arrivalTimeLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         
+//        let paragraph = NSMutableParagraphStyle()
+//        //paragraph.defaultTabInterval = -3.0
+//        paragraph.addTabStop(NSTextTab(textAlignment: NSTextAlignment.right, location: 0.003))
+//        paragraph.addTabStop(NSTextTab(textAlignment: NSTextAlignment.right, location: 0.003))
+//        paragraph.addTabStop(NSTextTab(textAlignment: NSTextAlignment.right, location: 0.003))
+        
+        //ADD TAB STOPS SO THINGS LINE UP RIGHT
+        
         //String(format: "Value: %3.2f\tResult: %3.2f", arguments: [2.7, 99.8])
         if(patternID == self.restApiManager.black.patternID){
             //String(format: "Black: %3.2f\tResult: %3.2f", arguments: [2.7, 99.8])
-            let labelString = "Black:           \(arriveMins) Mins"
+            let labelString = "Black\t\t\t\(arriveMins)\tMins"
             let coloredString = NSMutableAttributedString(string: labelString)
             coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: ColorWheel().black, range: NSRange(location:0,length:6))
+//            coloredString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraph, range: NSRange(location: 0, length: labelString.count))
             arrivalTimeLabel.attributedText = coloredString
         }else if(patternID == self.restApiManager.red.patternID){
-            let labelString = "Red  :            \(arriveMins) Mins"
+            let labelString = "Red \t\t\t\(arriveMins)\tMins"
             let coloredString = NSMutableAttributedString(string: labelString)
-            coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: ColorWheel().red, range: NSRange(location:0,length:6))
+            coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: ColorWheel().red, range: NSRange(location:0,length:4))
+//            coloredString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraph, range: NSRange(location: 0, length: labelString.count))
             arrivalTimeLabel.attributedText = coloredString
         }else if(patternID == self.restApiManager.gold.patternID){
-            let labelString = "Gold :            \(arriveMins) Mins"
+            let labelString = "Gold\t\t\t\(arriveMins)\tMins"
             let coloredString = NSMutableAttributedString(string: labelString)
-            coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: ColorWheel().gold, range: NSRange(location:0,length:6))
+            coloredString.addAttribute(NSAttributedStringKey.foregroundColor, value: ColorWheel().gold, range: NSRange(location:0,length:5))
+//            coloredString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraph, range: NSRange(location: 0, length: labelString.count))
+            
             arrivalTimeLabel.attributedText = coloredString
         }
         
