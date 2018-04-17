@@ -40,7 +40,8 @@ class StopInfoPopupViewCreator{
 
         let stopNameLabel = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 25))
         stopNameLabel.text = marker.title
-        stopNameLabel.font =  UIFont.systemFont(ofSize: 20, weight: .regular)
+        stopNameLabel.font = UIFont(name: "Raleway-Medium", size: 20)
+
         view.addSubview(stopNameLabel)
         
         var arriveTimes = [ArrivalInfo]()
@@ -76,7 +77,7 @@ class StopInfoPopupViewCreator{
         let arriveMins = SecsToMins(secsToArrival: arrivalInfo.secsToArrival)
         let arrivalTimeLabel = UILabel(frame: CGRect.init(x: parentLabel.frame.origin.x, y: parentLabel.frame.origin.y +
             parentLabel.frame.size.height + 15 * CGFloat(labelNumber), width: parentView.frame.size.width - 16, height: 15))
-        arrivalTimeLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        arrivalTimeLabel.font = UIFont(name: "Raleway-Thin", size: 15)
         
 //        let paragraph = NSMutableParagraphStyle()
 //        //paragraph.defaultTabInterval = -3.0

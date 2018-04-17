@@ -18,6 +18,16 @@
 		DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC58C5A3205F690F002F5010 /* LaunchScreen.storyboard */; };
 		DC58C5B0205F690F002F5010 /* Vandy_VansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */; };
 		DC58C5BB205F690F002F5010 /* Vandy_VansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */; };
+		DC688AF52086858C00521105 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AEB2086858C00521105 /* Raleway-ExtraLight.ttf */; };
+		DC688AF62086858C00521105 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AEC2086858C00521105 /* Raleway-Medium.ttf */; };
+		DC688AF72086858C00521105 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AED2086858C00521105 /* Raleway-SemiBold.ttf */; };
+		DC688AF82086858C00521105 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AEE2086858C00521105 /* Raleway-ExtraBold.ttf */; };
+		DC688AF92086858C00521105 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AEF2086858C00521105 /* Raleway-Regular.ttf */; };
+		DC688AFA2086858C00521105 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AF02086858C00521105 /* Raleway-Light.ttf */; };
+		DC688AFB2086858C00521105 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC688AF12086858C00521105 /* OFL.txt */; };
+		DC688AFC2086858C00521105 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AF22086858C00521105 /* Raleway-Thin.ttf */; };
+		DC688AFD2086858C00521105 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AF32086858C00521105 /* Raleway-Bold.ttf */; };
+		DC688AFF208688C900521105 /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC688AEA2086858C00521105 /* Raleway-Heavy.ttf */; };
 		DC922C6A208542840025BB9C /* VehicleLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC922C69208542840025BB9C /* VehicleLocationManager.swift */; };
 		DC922C6C208547110025BB9C /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC922C6B208547110025BB9C /* ButtonManager.swift */; };
 		DCB4A21D208041E700E0A9E7 /* StopInfoPopupViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4A21C208041E700E0A9E7 /* StopInfoPopupViewCreator.swift */; };
@@ -54,19 +64,29 @@
 		75628337D04D67AE80183D68 /* Pods-Vandy VansTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandy VansTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vandy VansTests/Pods-Vandy VansTests.release.xcconfig"; sourceTree = "<group>"; };
 		91A2721729968ADC620DF701 /* Pods-Vandy VansUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vandy VansUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vandy VansUITests/Pods-Vandy VansUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC2FC1EB206D4B31002C997E /* RestApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
-		DC58C597205F690F002F5010 /* Vandy Vans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vandy Vans.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C597205F690F002F5010 /* Vandy Vans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Vandy Vans.app"; path = "Vandy Van.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C59A205F690F002F5010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC58C59C205F690F002F5010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC58C59F205F690F002F5010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC58C5A1205F690F002F5010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC58C5A4205F690F002F5010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC58C5A6205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C5AB205F690F002F5010 /* Vandy VanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C5AF205F690F002F5010 /* Vandy_VansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansTests.swift; sourceTree = "<group>"; };
 		DC58C5B1205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VansUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC58C5B6205F690F002F5010 /* Vandy VanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vandy VanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC58C5BA205F690F002F5010 /* Vandy_VansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vandy_VansUITests.swift; sourceTree = "<group>"; };
 		DC58C5BC205F690F002F5010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC688AEA2086858C00521105 /* Raleway-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Heavy.ttf"; sourceTree = "<group>"; };
+		DC688AEB2086858C00521105 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		DC688AEC2086858C00521105 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		DC688AED2086858C00521105 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		DC688AEE2086858C00521105 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DC688AEF2086858C00521105 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		DC688AF02086858C00521105 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		DC688AF12086858C00521105 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		DC688AF22086858C00521105 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		DC688AF32086858C00521105 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		DC922C69208542840025BB9C /* VehicleLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleLocationManager.swift; sourceTree = "<group>"; };
 		DC922C6B208547110025BB9C /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
 		DCB4A21C208041E700E0A9E7 /* StopInfoPopupViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopInfoPopupViewCreator.swift; sourceTree = "<group>"; };
@@ -133,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				DC58C597205F690F002F5010 /* Vandy Vans.app */,
-				DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */,
-				DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */,
+				DC58C5AB205F690F002F5010 /* Vandy VanTests.xctest */,
+				DC58C5B6205F690F002F5010 /* Vandy VanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +162,7 @@
 		DC58C599205F690F002F5010 /* Vandy Vans */ = {
 			isa = PBXGroup;
 			children = (
+				DC688AE92086858C00521105 /* raleway */,
 				DC58C59A205F690F002F5010 /* AppDelegate.swift */,
 				DC2FC1EB206D4B31002C997E /* RestApiManager.swift */,
 				DCD09EE42076A2C800BA597D /* VehicleLocationLoop.swift */,
@@ -179,6 +200,23 @@
 			path = "Vandy VansUITests";
 			sourceTree = "<group>";
 		};
+		DC688AE92086858C00521105 /* raleway */ = {
+			isa = PBXGroup;
+			children = (
+				DC688AEA2086858C00521105 /* Raleway-Heavy.ttf */,
+				DC688AEB2086858C00521105 /* Raleway-ExtraLight.ttf */,
+				DC688AEC2086858C00521105 /* Raleway-Medium.ttf */,
+				DC688AED2086858C00521105 /* Raleway-SemiBold.ttf */,
+				DC688AEE2086858C00521105 /* Raleway-ExtraBold.ttf */,
+				DC688AEF2086858C00521105 /* Raleway-Regular.ttf */,
+				DC688AF02086858C00521105 /* Raleway-Light.ttf */,
+				DC688AF12086858C00521105 /* OFL.txt */,
+				DC688AF22086858C00521105 /* Raleway-Thin.ttf */,
+				DC688AF32086858C00521105 /* Raleway-Bold.ttf */,
+			);
+			path = raleway;
+			sourceTree = "<group>";
+		};
 		F17F3BAE806EC48E07A3D57E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC58C596205F690F002F5010 /* Vandy Vans */ = {
+		DC58C596205F690F002F5010 /* Vandy Van */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Vans" */;
+			buildConfigurationList = DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Van" */;
 			buildPhases = (
 				E21362CDAC5942604B6AC431 /* [CP] Check Pods Manifest.lock */,
 				DC58C593205F690F002F5010 /* Sources */,
@@ -210,14 +248,14 @@
 			);
 			dependencies = (
 			);
-			name = "Vandy Vans";
+			name = "Vandy Van";
 			productName = "Vandy Vans";
 			productReference = DC58C597205F690F002F5010 /* Vandy Vans.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC58C5AA205F690F002F5010 /* Vandy VansTests */ = {
+		DC58C5AA205F690F002F5010 /* Vandy VanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansTests" */;
+			buildConfigurationList = DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VanTests" */;
 			buildPhases = (
 				AED41C83C6EED9D4F16E4E8D /* [CP] Check Pods Manifest.lock */,
 				DC58C5A7205F690F002F5010 /* Sources */,
@@ -231,14 +269,14 @@
 			dependencies = (
 				DC58C5AD205F690F002F5010 /* PBXTargetDependency */,
 			);
-			name = "Vandy VansTests";
+			name = "Vandy VanTests";
 			productName = "Vandy VansTests";
-			productReference = DC58C5AB205F690F002F5010 /* Vandy VansTests.xctest */;
+			productReference = DC58C5AB205F690F002F5010 /* Vandy VanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DC58C5B5205F690F002F5010 /* Vandy VansUITests */ = {
+		DC58C5B5205F690F002F5010 /* Vandy VanUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansUITests" */;
+			buildConfigurationList = DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VanUITests" */;
 			buildPhases = (
 				4A39E8E0BC50F2B79F59EE4B /* [CP] Check Pods Manifest.lock */,
 				DC58C5B2205F690F002F5010 /* Sources */,
@@ -252,9 +290,9 @@
 			dependencies = (
 				DC58C5B8205F690F002F5010 /* PBXTargetDependency */,
 			);
-			name = "Vandy VansUITests";
+			name = "Vandy VanUITests";
 			productName = "Vandy VansUITests";
-			productReference = DC58C5B6205F690F002F5010 /* Vandy VansUITests.xctest */;
+			productReference = DC58C5B6205F690F002F5010 /* Vandy VanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -283,7 +321,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Vans" */;
+			buildConfigurationList = DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Van" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -296,9 +334,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC58C596205F690F002F5010 /* Vandy Vans */,
-				DC58C5AA205F690F002F5010 /* Vandy VansTests */,
-				DC58C5B5205F690F002F5010 /* Vandy VansUITests */,
+				DC58C596205F690F002F5010 /* Vandy Van */,
+				DC58C5AA205F690F002F5010 /* Vandy VanTests */,
+				DC58C5B5205F690F002F5010 /* Vandy VanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,9 +346,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC688AF82086858C00521105 /* Raleway-ExtraBold.ttf in Resources */,
+				DC688AFD2086858C00521105 /* Raleway-Bold.ttf in Resources */,
+				DC688AFB2086858C00521105 /* OFL.txt in Resources */,
+				DC688AFA2086858C00521105 /* Raleway-Light.ttf in Resources */,
+				DC688AF62086858C00521105 /* Raleway-Medium.ttf in Resources */,
 				DC58C5A5205F690F002F5010 /* LaunchScreen.storyboard in Resources */,
+				DC688AF92086858C00521105 /* Raleway-Regular.ttf in Resources */,
+				DC688AF52086858C00521105 /* Raleway-ExtraLight.ttf in Resources */,
 				DC58C5A2205F690F002F5010 /* Assets.xcassets in Resources */,
+				DC688AFF208688C900521105 /* Raleway-Heavy.ttf in Resources */,
+				DC688AFC2086858C00521105 /* Raleway-Thin.ttf in Resources */,
 				DC58C5A0205F690F002F5010 /* Main.storyboard in Resources */,
+				DC688AF72086858C00521105 /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,12 +573,12 @@
 /* Begin PBXTargetDependency section */
 		DC58C5AD205F690F002F5010 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC58C596205F690F002F5010 /* Vandy Vans */;
+			target = DC58C596205F690F002F5010 /* Vandy Van */;
 			targetProxy = DC58C5AC205F690F002F5010 /* PBXContainerItemProxy */;
 		};
 		DC58C5B8205F690F002F5010 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC58C596205F690F002F5010 /* Vandy Vans */;
+			target = DC58C596205F690F002F5010 /* Vandy Van */;
 			targetProxy = DC58C5B7205F690F002F5010 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -605,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -658,7 +706,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -675,9 +723,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BL526KQ3T6;
 				INFOPLIST_FILE = "Vandy Vans/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankurlal.vandyvan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -694,9 +742,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BL526KQ3T6;
 				INFOPLIST_FILE = "Vandy Vans/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ankur-lal.Vandy-Vans";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankurlal.vandyvan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -718,7 +766,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Vans.app/Vandy Vans";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Van.app/Vandy Van";
 			};
 			name = Debug;
 		};
@@ -736,7 +784,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Vans.app/Vandy Vans";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vandy Van.app/Vandy Van";
 			};
 			name = Release;
 		};
@@ -777,7 +825,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Vans" */ = {
+		DC58C592205F690E002F5010 /* Build configuration list for PBXProject "Vandy Van" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC58C5BD205F690F002F5010 /* Debug */,
@@ -786,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Vans" */ = {
+		DC58C5BF205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy Van" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC58C5C0205F690F002F5010 /* Debug */,
@@ -795,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansTests" */ = {
+		DC58C5C2205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC58C5C3205F690F002F5010 /* Debug */,
@@ -804,7 +852,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VansUITests" */ = {
+		DC58C5C5205F690F002F5010 /* Build configuration list for PBXNativeTarget "Vandy VanUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC58C5C6205F690F002F5010 /* Debug */,
