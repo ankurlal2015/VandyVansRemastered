@@ -103,10 +103,15 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let stopId = marker.userData as! String
-        let arrivals = self.arrivalsCacher.getCachedArrivals(stopId: stopId)
+        let stopId = marker.userData as? String
+        if(stopId != nil){
+            let arrivals = self.arrivalsCacher.getCachedArrivals(stopId: stopId!)
+             return stopInfoPopupViewCreator.generateStopInfoWindowView(marker: marker, arrivals: arrivals)
+        }else{
+             return UIView()
+        }
         
-        return stopInfoPopupViewCreator.generateStopInfoWindowView(marker: marker, arrivals: arrivals)
+       
     }
     
     func clearTimer(){

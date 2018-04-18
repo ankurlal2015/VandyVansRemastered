@@ -77,7 +77,7 @@ class StopInfoPopupViewCreator{
         let arriveMins = SecsToMins(secsToArrival: arrivalInfo.secsToArrival)
         let arrivalTimeLabel = UILabel(frame: CGRect.init(x: parentLabel.frame.origin.x, y: parentLabel.frame.origin.y +
             parentLabel.frame.size.height + 15 * CGFloat(labelNumber), width: parentView.frame.size.width - 16, height: 15))
-        arrivalTimeLabel.font = UIFont(name: "Raleway-Thin", size: 15)
+        arrivalTimeLabel.font = UIFont(name: "Raleway", size: 15)
         
 //        let paragraph = NSMutableParagraphStyle()
 //        //paragraph.defaultTabInterval = -3.0
