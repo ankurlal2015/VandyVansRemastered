@@ -14,6 +14,7 @@ import SwiftyJSON
 //To move marker so the center of circle is on the line instead of the edge
 let markerShiftConstant = 0.0003
 
+//TODO: maybe get rid of patternID
 struct StopInfo{
     var stopId: String!
     var patternID: String!
@@ -32,12 +33,14 @@ class VandyMapView{
         mapView.clear()
         let path = GMSMutablePath()
         for index in 0..<waypoints[0].count {
+            //TODO: change indexing
             let lattitude = Double(waypoints[0][index]["Latitude"].rawString()!)
             let longitude = Double(waypoints[0][index]["Longitude"].rawString()!)
             path.add(CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!))
         }
         
         //-1 because bad data duplicates lupton and scomb. If data changes, remove this
+        //TODO, get rid of the -1
         for index in 0..<stops.count - 1 {
             let lattitude = Double(stops[index]["Latitude"].rawString()!)! - markerShiftConstant
             let longitude = Double(stops[index]["Longitude"].rawString()!)

@@ -14,7 +14,7 @@ class ArrivalsCacher{
     var cache : [String: JSON] = [:]
     let restApiManager = RestApiManager()
     
-   
+    //TODO: change whole logic and structure maybe.
     @objc func cacheBlackArrivals(){
         restApiManager.getStops(vanColor: "BLACK") {
             (stops) in

@@ -26,17 +26,14 @@ class VehicleLocationLoop{
             let lattitude = Double(vehicles[index]["Latitude"].rawString()!)! 
             let longitude = Double(vehicles[index]["Longitude"].rawString()!)
             let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
+            //TODO: get rid of cardinal heading. Switch to integer heading. no conversion
             let cardinalHeading = vehicles[index]["Heading"].rawString()!
-            //let speed = Int(vehicles[index]["Speed"].rawString()!)!
+            
             let marker = GMSMarker(position: position)
-            //print(self.prevLocations.count)
-            //let prevlocation = (self.prevLocations.count > index) ? prevLocations[index] : CLLocationCoordinate2D()
+           
+            //TODO: no conversion, get it directly
             marker.rotation = cardinalToDegrees(cardinalDirection: cardinalHeading)
-            //marker.rotation =  calcRotationForVan(cardinalRotation: cardinalHeading, currentLocation: position, prevLocation: prevlocation)
-//            //Save State to calculate proper angle
-//            if(!self.isLocationEqual(A: position, B: prevlocation)){
-//                self.prevLocations.insert(position, at: index)
-//            }
+          
             //Save marker ref to clear on next refresh
             self.vans.append(marker)
             //marker.title = vehicles[index]["Name"].rawString()!
@@ -52,6 +49,7 @@ class VehicleLocationLoop{
         vans.removeAll()
     }
     
+    //TODO: remove code for heading
     func calcRotationForVan(cardinalRotation:String, currentLocation:CLLocationCoordinate2D, prevLocation:CLLocationCoordinate2D) -> Double{
         
         print(prevLocation)

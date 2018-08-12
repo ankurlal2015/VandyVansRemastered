@@ -14,9 +14,14 @@ struct VanInfo{
     var name: String!
     var routeID: String!
     var patternID: String!
+    //TODO: waypoints
+    //TODO: stops
+    //TODO: maybe delete patternID
+    //var waypoints: []!
 }
 
 class RestApiManager: NSObject {
+    //TODO: Change Base URL
     let base = "https://www.vandyvans.com/"
     
     var black:VanInfo
@@ -25,7 +30,7 @@ class RestApiManager: NSObject {
     
     override init(){
         //Default values before fetching new one. Yes I know this is hacky
-        //TODO: Fix this
+        //TODO: add waypoints array
         self.black = VanInfo(name:"black", routeID: "1290", patternID:"1857")
         self.gold = VanInfo(name:"gold", routeID: "1289", patternID:"3021")
         self.red = VanInfo(name:"red", routeID: "1291", patternID:"1858")
@@ -35,12 +40,14 @@ class RestApiManager: NSObject {
     }
     
     func getRouteDataForInitialization() {
+        //TODO: change req
         let req = base + "Region/0/Routes/"
         print(req)
         Alamofire.request(req).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJson = JSON(responseData.result.value!)
-                //0, 1, 2 hardcoded under the assumption that the json is ordered as such
+                //TODO:change indexes for routes request to get correct things
+                //TODO: also encode waypoints
                 self.black = VanInfo(name:swiftyJson[0]["ShortName"].rawString(),
                                      routeID:swiftyJson[0]["ID"].rawString(),
                                      patternID:swiftyJson[0]["Patterns"][0]["ID"].rawString())
@@ -54,6 +61,7 @@ class RestApiManager: NSObject {
         }
     }
     
+    //TODO: Change to return vanInfo.waypoints
     func getWaypoints(vanColor : String, completion: @escaping (_ value:JSON)->()){
         var routeId = ""
         switch vanColor {
@@ -76,6 +84,7 @@ class RestApiManager: NSObject {
         }
     }
     
+    //TODO return vanInfo.stops
     func getStops(vanColor : String, completion: @escaping (_ value:JSON)->()) {
         var routeId = ""
         var patternId = ""
@@ -102,6 +111,7 @@ class RestApiManager: NSObject {
         }
     }
     
+    //TODO: change
     func getVehicles(vanColor : String, completion: @escaping (_ value:JSON)->()){
         var routeId = ""
         switch vanColor {
@@ -114,6 +124,7 @@ class RestApiManager: NSObject {
         default :
             print("specify van, either RED, BLACK, or GOLD")
         }
+        //TODO: change request
         let req = base + "Route/" + routeId + "/Vehicles"
         print(req)
         Alamofire.request(req).responseJSON { (responseData) -> Void in
@@ -124,6 +135,7 @@ class RestApiManager: NSObject {
         }
     }
     
+    //TODO: change req
     func getArrivals(stopId : String, completion: @escaping (_ value:JSON)->()){
         let req = base + "Stop/" + stopId + "/Arrivals"
         print(req)
