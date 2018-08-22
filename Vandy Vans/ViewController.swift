@@ -40,32 +40,30 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     }
     
     @objc func drawBlackRoute(){
-        self.restApiManager.getWaypoints(vanColor: "BLACK") {
-            (waypoints) in
-            self.restApiManager.getStops(vanColor: "BLACK") {
+        self.restApiManager.getStops(vanColor: "BLACK") {
                 (stops) in
                 //recenter
                 SingletonMap.map.recenterMap()
                 //add route
+                let waypoints = self.restApiManager.getWaypoints(vanColor: "BLACK")
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().black)
                 self.buttonManager.initButtons(viewController: self)
                 //Clear previous vans
                 self.clearTimer()
                 //Start fetching van data
-                self.vanTimer = Timer.scheduledTimer(timeInterval: 2, target: self.vehicleLocationManager, selector: #selector(self.vehicleLocationManager.drawBlackVans), userInfo: nil, repeats: true)
+                self.vanTimer = Timer.scheduledTimer(timeInterval: 1, target: self.vehicleLocationManager, selector: #selector(self.vehicleLocationManager.drawBlackVans), userInfo: nil, repeats: true)
                 self.arrivalTimer = Timer.scheduledTimer(timeInterval: 2, target: self.arrivalsCacher, selector: #selector(self.arrivalsCacher.cacheBlackArrivals), userInfo: nil, repeats: true)
-            }
+            
         }
     }
     
     @objc func drawRedRoute(){
-        self.restApiManager.getWaypoints(vanColor: "RED") {
-            (waypoints) in
             self.restApiManager.getStops(vanColor: "RED") {
                 (stops) in
                 //recenter
                 SingletonMap.map.recenterMap()
                 //add route
+                let waypoints = self.restApiManager.getWaypoints(vanColor: "RED")
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().red)
                 self.buttonManager.initButtons(viewController: self)
                 
@@ -76,19 +74,17 @@ class ViewController: UIViewController, GMSMapViewDelegate {
                 self.vanTimer = Timer.scheduledTimer(timeInterval: 2, target: self.vehicleLocationManager, selector: #selector(self.vehicleLocationManager.drawRedVans), userInfo: nil, repeats: true)
                 self.arrivalTimer = Timer.scheduledTimer(timeInterval: 2, target: self.arrivalsCacher, selector: #selector(self.arrivalsCacher.cacheRedArrivals), userInfo: nil, repeats: true)
                 
-            }
             
         }
     }
     
     @objc func drawGoldRoute(){
-        self.restApiManager.getWaypoints(vanColor: "GOLD") {
-            (waypoints) in
             self.restApiManager.getStops(vanColor: "GOLD") {
                 (stops) in
                 //recenter
                 SingletonMap.map.recenterMap()
                 //add route
+                let waypoints = self.restApiManager.getWaypoints(vanColor: "GOLD")
                 VandyMapView().drawRouteWithStops(waypoints: waypoints, stops:stops, color:ColorWheel().gold)
                 self.buttonManager.initButtons(viewController: self)
                 
@@ -98,7 +94,6 @@ class ViewController: UIViewController, GMSMapViewDelegate {
                 //Start fetching van data
                 self.vanTimer = Timer.scheduledTimer(timeInterval: 2, target: self.vehicleLocationManager, selector: #selector(self.vehicleLocationManager.drawGoldVans), userInfo: nil, repeats: true)
                 self.arrivalTimer = Timer.scheduledTimer(timeInterval: 2, target: self.arrivalsCacher, selector: #selector(self.arrivalsCacher.cacheGoldArrivals), userInfo: nil, repeats: true)
-            }
         }
     }
     
@@ -106,12 +101,10 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         let stopId = marker.userData as? String
         if(stopId != nil){
             let arrivals = self.arrivalsCacher.getCachedArrivals(stopId: stopId!)
-             return stopInfoPopupViewCreator.generateStopInfoWindowView(marker: marker, arrivals: arrivals)
+            return stopInfoPopupViewCreator.generateStopInfoWindowView(marker: marker, arrivals: arrivals, stopId:stopId!)
         }else{
              return UIView()
         }
-        
-       
     }
     
     func clearTimer(){

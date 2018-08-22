@@ -19,10 +19,11 @@ class ArrivalsCacher{
         restApiManager.getStops(vanColor: "BLACK") {
             (stops) in
             for index in 0..<stops.count {
-                let stopId = stops[index]["ID"].rawString()!
+                let stopId = stops[index]["id"].rawString()!
                 self.restApiManager.getArrivals(stopId: stopId){
                     (arrivals) in
                     self.cache[stopId] = arrivals
+                    //print(arrivals)
                 }
             }
         }
@@ -33,7 +34,7 @@ class ArrivalsCacher{
         restApiManager.getStops(vanColor: "RED") {
             (stops) in
             for index in 0..<stops.count {
-                let stopId = stops[index]["ID"].rawString()!
+                let stopId = stops[index]["id"].rawString()!
                 self.restApiManager.getArrivals(stopId: stopId){
                     (arrivals) in
                     self.cache[stopId] = arrivals
@@ -47,7 +48,7 @@ class ArrivalsCacher{
         restApiManager.getStops(vanColor: "GOLD") {
             (stops) in
             for index in 0..<stops.count {
-                let stopId = stops[index]["ID"].rawString()!
+                let stopId = stops[index]["id"].rawString()!
                 self.restApiManager.getArrivals(stopId: stopId){
                     (arrivals) in
                     self.cache[stopId] = arrivals

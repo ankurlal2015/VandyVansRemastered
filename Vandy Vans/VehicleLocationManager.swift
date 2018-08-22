@@ -7,20 +7,26 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class VehicleLocationManager{
     let restApiManager = RestApiManager()
     let vehicleLocationLoop = VehicleLocationLoop()
+    let vanNotRunningBanner = VanNotRunningBanner()
     
-    @objc func drawBlackVans(){
+    @objc func drawBlackVans(viewController:ViewController){
         self.restApiManager.getVehicles(vanColor: "BLACK") {
             (vehicles) in
-            //print(vehicles)
-            self.vehicleLocationLoop.drawVans(vehicles: vehicles)
+            if(vehicles != []){
+                self.vehicleLocationLoop.drawVans(vehicles: vehicles)
+            }else{
+                //viewController.view.addSubview(UIView())
+                print("No Black Vans Running")
+            }
         }
     }
     
-    @objc func drawRedVans(){
+    @objc func drawRedVans(viewController:ViewController){
         self.restApiManager.getVehicles(vanColor: "RED") {
             (vehicles) in
             //print(vehicles)
@@ -28,7 +34,7 @@ class VehicleLocationManager{
         }
     }
     
-    @objc func drawGoldVans(){
+    @objc func drawGoldVans(viewController:ViewController){
         self.restApiManager.getVehicles(vanColor: "GOLD") {
             (vehicles) in
             //print(vehicles)

@@ -17,7 +17,7 @@ let markerShiftConstant = 0.0003
 //TODO: maybe get rid of patternID
 struct StopInfo{
     var stopId: String!
-    var patternID: String!
+    //var patternID: String!
 }
 
 class VandyMapView{
@@ -29,25 +29,26 @@ class VandyMapView{
         return mapView
     }
     
-    func drawRouteWithStops(waypoints:JSON, stops:JSON, color: UIColor) {
+    func drawRouteWithStops(waypoints:[Double], stops:JSON, color: UIColor) {
         mapView.clear()
         let path = GMSMutablePath()
-        for index in 0..<waypoints[0].count {
+        //for index in 0..<waypoints.count {
+        for i in stride(from: 0, to: waypoints.count, by: 2) {
             //TODO: change indexing
-            let lattitude = Double(waypoints[0][index]["Latitude"].rawString()!)
-            let longitude = Double(waypoints[0][index]["Longitude"].rawString()!)
-            path.add(CLLocationCoordinate2D(latitude: lattitude!, longitude: longitude!))
+            let lattitude = waypoints[i]
+            let longitude = waypoints[i+1]
+            path.add(CLLocationCoordinate2D(latitude: lattitude, longitude: longitude))
         }
         
         //-1 because bad data duplicates lupton and scomb. If data changes, remove this
         //TODO, get rid of the -1
-        for index in 0..<stops.count - 1 {
-            let lattitude = Double(stops[index]["Latitude"].rawString()!)! - markerShiftConstant
-            let longitude = Double(stops[index]["Longitude"].rawString()!)
+        for index in 0..<stops.count {
+            let lattitude = Double(stops[index]["lat"].rawString()!)! - markerShiftConstant
+            let longitude = Double(stops[index]["lon"].rawString()!)
             let position = CLLocationCoordinate2D(latitude: lattitude, longitude: longitude!)
             let marker = GMSMarker(position: position)
-            marker.title = stops[index]["Name"].rawString()!
-            marker.userData = stops[index]["ID"].rawString()!
+            marker.title = stops[index]["name"].rawString()!
+            marker.userData = stops[index]["id"].rawString()!
             marker.map = self.mapView
             marker.icon = UIImage(named:"GenericStop")
         }
